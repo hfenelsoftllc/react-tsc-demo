@@ -5,6 +5,8 @@ import { PersonList } from './components/PersonList';
 import { Status } from './components/Status';
 import { Heading } from './components/Heading';
 import { Oscar } from './components/Oscar';
+import { Button } from './components/Button';
+import { Input } from './components/Input';
 
 
 const personName  = {
@@ -42,6 +44,15 @@ function App() {
       <Oscar>
         <Heading> Oscar goes to Leonardo Dicaprio</Heading>
       </Oscar>
+
+      <Input value='' handleChange={event =>{
+        console.log('Text Changed', event.preventDefault())
+      }} />
+      <Button handleClick={(event) =>{
+        console.log('Button Clicked', event.preventDefault())
+      }} />
+
+
     </div>
   );
 }
