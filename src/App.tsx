@@ -1,12 +1,13 @@
 import './App.css';
 import { Greet } from './components/Greet';
-import { Person } from './components/Person';
-import { PersonList } from './components/PersonList';
-import { Status } from './components/Status';
-import { Heading } from './components/Heading';
+import { Person } from './components/Person/Person';
+import { PersonList } from './components/Person/PersonList';
+import { Status } from './components/shared/Status';
+import { Heading } from './components/shared/Heading';
 import { Oscar } from './components/Oscar';
 import { Button } from './components/Button';
 import { Input } from './components/Input';
+import { Container } from './components/Container';
 
 
 const personName  = {
@@ -45,6 +46,7 @@ function App() {
         <Heading> Oscar goes to Leonardo Dicaprio</Heading>
       </Oscar>
 
+      <Container styles={{ border: '1px solid black', padding: '1rem' }} />
       <Input value='' handleChange={event =>{
         console.log('Text Changed', event.preventDefault())
       }} />
